@@ -13,9 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+    
+        //#if DEBUG
+            let fpsLabel = customFps(frame: CGRectMake(15, win_h - 40, 55, 20))
+            self.window?.bringSubviewToFront(fpsLabel)
+            //#else
+            //#endif
         return true
     }
 
